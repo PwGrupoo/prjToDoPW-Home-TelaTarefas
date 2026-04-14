@@ -1,0 +1,162 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f1f5f9;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+/* HEADER */
+
+header{
+    background:#1e293b;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+}
+
+header nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+header nav a:hover{
+    text-decoration:underline;
+}
+
+/* BOTÕES */
+
+.btn{
+    background:#2563eb;
+    color:white;
+    padding:10px 15px;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}
+
+/* HERO (HOME) */
+
+main{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero{
+    text-align:center;
+    background:white;
+    padding:50px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.hero h1{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:gray;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1e293b;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+/* TAREFAS */
+
+.container{
+    width:80%;
+    margin:40px auto;
+}
+
+.top-bar{
+    margin-bottom:10px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* TABELA */
+
+.tabela{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.tabela thead{
+    background:#1e293b;
+    color:white;
+}
+
+.tabela th, .tabela td{
+    padding:12px;
+}
+
+.tabela tbody tr:nth-child(even){
+    background:#f3f4f6;
+}
+
+.tabela tbody tr:hover{
+    background:#e2e8f0;
+}
+
+
+/* FORMULÁRIO */
+
+.form-container{
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    width:350px;
+    margin:auto;
+    text-align:center;
+}
+
+.form-container h1{
+    margin-bottom:20px;
+}
+
+.form-container form{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-container input{
+    padding:10px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.form-container button{
+    border:none;
+    cursor:pointer;
+}
