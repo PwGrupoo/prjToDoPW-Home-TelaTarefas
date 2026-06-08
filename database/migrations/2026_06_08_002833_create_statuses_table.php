@@ -11,24 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tarefas', function (Blueprint $table) {
-            $table->id();
-
-            $table->foreignId('user_id')->constrained();
-
-            $table->string('titulo');
-
-            $table->text('descricao')->nullable();
-
-            $table->timestamps();
-        });
-    }
-
+    Schema::create('statuses', function (Blueprint $table) {
+        $table->id();
+        $table->string('nome');
+        $table->timestamps();
+    });
+}
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('tarefas');
+        Schema::dropIfExists('statuses');
     }
 };

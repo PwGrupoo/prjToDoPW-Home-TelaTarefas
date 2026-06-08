@@ -9,6 +9,7 @@ class Usuario extends Model
 {
     use HasFactory;
 
+    // Corrigido: tabela no plural, consistente com a migration
     protected $table = 'usuarios';
 
     protected $fillable = [
@@ -16,4 +17,10 @@ class Usuario extends Model
         'email',
         'password',
     ];
+
+    // Relacionamento: um usuário tem várias tarefas
+    public function tarefas()
+    {
+        return $this->hasMany(Tarefa::class, 'usuario_id');
+    }
 }

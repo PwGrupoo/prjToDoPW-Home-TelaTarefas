@@ -1,14 +1,25 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TarefaController;
+
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\TarefaController;
+use App\Http\Controllers\StatusController;
 
-// Rotas de Tarefas na API
-Route::get('/tarefas', [TarefaController::class, 'indexApi']);
-Route::post('/tarefas', [TarefaController::class, 'storeApi']);
+// -------------------------------------------------------
+// ROTAS DE USUÁRIOS
+// -------------------------------------------------------
+Route::get('/usuarios',  [UsuarioController::class, 'indexApi']);  // GET  - listar
+Route::post('/usuarios', [UsuarioController::class, 'storeApi']);  // POST - cadastrar
 
-// Rotas de Usuários na API
-Route::get('/usuarios', [UsuarioController::class, 'indexApi']);
-Route::post('/usuarios', [UsuarioController::class, 'storeApi']);
+// -------------------------------------------------------
+// ROTAS DE TAREFAS
+// -------------------------------------------------------
+Route::get('/tarefas',  [TarefaController::class, 'indexApi']);    // GET  - listar (inclui status)
+Route::post('/tarefas', [TarefaController::class, 'storeApi']);    // POST - cadastrar
+
+// -------------------------------------------------------
+// ROTAS DE STATUS
+// -------------------------------------------------------
+Route::get('/status',  [StatusController::class, 'indexApi']);     // GET  - listar (inclui tarefa)
+Route::post('/status', [StatusController::class, 'store']);        // POST - cadastrar/atualizar
